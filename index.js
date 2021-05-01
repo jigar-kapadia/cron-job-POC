@@ -3,7 +3,7 @@ const cron = require("node-cron");
 const express = require("express");
 const fs = require("fs");
 const sendGrid = require('@sendgrid/mail');
-sendGrid.setApiKey('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')
+sendGrid.setApiKey('SG')
 app = express();
 
 cron.schedule("* * * * *", () => {
@@ -13,7 +13,7 @@ cron.schedule("* * * * *", () => {
     switch (currentTime) {
         case '18:59':
             const msg = {
-                to: 'jigark00@gmail.com',
+                to: 'jigark22@gmail.com',
                 from: 'support@jk.com',
                 subject: 'Sending with SendGrid is Fun',
                 text: 'and easy to do anywhere, even with Node.js',
